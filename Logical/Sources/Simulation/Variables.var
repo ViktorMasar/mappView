@@ -1,0 +1,8 @@
+VAR
+	valueCel : REAL;
+	valuemm : REAL;
+	minLimit : REAL;
+	maxLimit : REAL;
+	userLimitValue : INT;
+	indicateStyle : BOOL;
+END_VAR

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<EventBindingSet id="MainEventBinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+		
+		<!-- login from header -->
+		<EventBinding>
+			<Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentHeader" widgetRefId="ButtonLogin" event="Click"/>
+			<EventHandler>
+				<Action>
+					<Target xsi:type="clientSystem.Action">
+						<Method xsi:type="clientSystem.Action.OpenDialog" dialogId="LoginDialog" horizontalPos="center" verticalPos="middle" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		
+		<!-- logout and change page -->
+		<EventBinding>
+			<Source xsi:type="widgets.brease.Image.Event" contentRefId="ContentNavigation" widgetRefId="ImageLogout" event="Click"/>
+			<EventHandler>
+				<Action>
+					<Target xsi:type="session.VariableAction" refId="CloseAndLogout" >
+						<Method xsi:type="session.VariableAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+			
+		<EventBinding>
+			<Source xsi:type="session.Event" refId="CloseAndLogout" event="ValueChanged" />
+			<EventHandler condition="newValue">
+				<Sequence>
+					<Step order="0">
+						<Action>
+							<Target xsi:type="session.VariableAction" refId="CloseAndLogout" >
+								<Method xsi:type="session.VariableAction.SetValueBool" value="false" />
+							</Target>
+						</Action>
+					</Step>
+					<Step order="1">
+						<Action>
+							<Target xsi:type="clientSystem.Action">
+								<Method xsi:type="clientSystem.Action.Navigate" pageId="MainPage" />
+							</Target>
+						</Action>
+					</Step>
+					<Step order="2">
+						<Action>
+							<Target xsi:type="clientSystem.Action">
+								<Method xsi:type="clientSystem.Action.Logout" />
+							</Target>
+						</Action>
+					</Step>
+					<Step order="3">	
+						<Action>
+							<Target xsi:type="session.VariableAction" refId="DayNightTheme" >
+								<Method xsi:type="session.VariableAction.SetValueNumber" value="0" />
+							</Target>
+						</Action>
+					</Step>
+					<Step order="4">	
+						<Action>
+							<Target xsi:type="session.VariableAction" refId="DayNight" >
+								<Method xsi:type="session.VariableAction.SetValueBool" value="false" />
+							</Target>
+						</Action>
+					</Step>
+				</Sequence>
+			</EventHandler>
+		</EventBinding>
+
+		<!-- event page -->
+		
+		<EventBinding>
+			<Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentEventPage" widgetRefId="ButtonDialogModal" event="Click"/>
+			<EventHandler>
+				<Action>
+					<Target xsi:type="clientSystem.Action">
+						<Method xsi:type="clientSystem.Action.OpenDialog" dialogId="EventDialog" mode="modal" horizontalPos="center" verticalPos="middle" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>		
+		
+		<EventBinding>
+			<Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentEventPage" widgetRefId="ButtonDialogModeless" event="Click"/>
+			<EventHandler>
+				<Action>
+					<Target xsi:type="clientSystem.Action">
+						<Method xsi:type="clientSystem.Action.OpenDialog" dialogId="EventDialog" mode="modeless" horizontalPos="center" verticalPos="middle" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>		
+		
+		<EventBinding>
+			<Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentEventPage" widgetRefId="ButtonMsgBox" event="Click"/>
+			<EventHandler>
+				<Action>
+					<Target xsi:type="clientSystem.Action">
+						<Method xsi:type="clientSystem.Action.ShowMessageBox" type="OKCancel" message="$MsgBox.Message" header="$MsgBox.Header" icon="Warning"  />
+					</Target>
+					<Result>
+						<ResultHandler condition="result = 4">
+							<Action>
+								<Target xsi:type="session.VariableAction" refId="MachineState" >
+									<Method xsi:type="session.VariableAction.SetValueNumber" value="1" />
+								</Target>
+							</Action>
+						</ResultHandler>
+						<ResultHandler condition="result = 8">
+							<Action>
+								<Target xsi:type="session.VariableAction" refId="MachineState" >
+									<Method xsi:type="session.VariableAction.SetValueNumber" value="0" />
+								</Target>
+							</Action>
+						</ResultHandler>
+					</Result>
+				</Action>
+			</EventHandler>
+		</EventBinding>	
+		
+		<!-- close login dialog -->
+		
+		<EventBinding>
+			<Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentLogin" widgetRefId="ButtonClose" event="Click"/>
+			<EventHandler>
+				<Action>
+					<Target xsi:type="clientSystem.Action">
+						<Method xsi:type="clientSystem.Action.CloseDialog" dialogId="LoginDialog" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<!-- close event dialog -->
+		<EventBinding>
+			<Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentEvent" widgetRefId="ButtonClose" event="Click"/>
+			<EventHandler>
+				<Action>
+					<Target xsi:type="clientSystem.Action">
+						<Method xsi:type="clientSystem.Action.CloseDialog" dialogId="EventDialog" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		
+		<EventBinding>
+			<Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentEvent" widgetRefId="ButtonOn" event="Click"/>
+			<EventHandler>
+				<Action>
+					<Target xsi:type="session.VariableAction" refId="MachineState" >
+						<Method xsi:type="session.VariableAction.SetValueNumber" value="1" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		
+		<EventBinding>
+			<Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentEvent" widgetRefId="ButtonOff" event="Click"/>
+			<EventHandler>
+				<Action>
+					<Target xsi:type="session.VariableAction" refId="MachineState" >
+						<Method xsi:type="session.VariableAction.SetValueNumber" value="0" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		
+  </Bindings>
+</EventBindingSet>

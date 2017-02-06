@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.2.7.54 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC">mvClient</Object>
+    <Object Type="Program" Language="IEC">mvServer</Object>
+    <Object Type="Program" Language="IEC">Table</Object>
+    <Object Type="Program" Language="IEC">Simulation</Object>
+    <Object Type="Program" Language="IEC">VarList</Object>
+    <Object Type="Program" Language="IEC">Chart</Object>
+    <Object Type="Program" Language="IEC">ProfileGen</Object>
+    <Object Type="Program" Language="IEC">Communication</Object>
+  </Objects>
+</Package>

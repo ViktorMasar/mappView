@@ -1,0 +1,4 @@
+VAR
+	Temperature : INT;
+	Speed : REAL;
+END_VAR

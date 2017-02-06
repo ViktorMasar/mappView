@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.2.5.388?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Alarm.png</Object>
+    <Object Type="File">Movie.png</Object>
+    <Object Type="File">Camera.png</Object>
+    <Object Type="File">Config.png</Object>
+    <Object Type="File">Overview.png</Object>
+    <Object Type="File">Folder.png</Object>
+    <Object Type="File">Gallery.png</Object>
+    <Object Type="File">Touch.png</Object>
+    <Object Type="File">User.png</Object>
+    <Object Type="File">LineChart.png</Object>
+    <Object Type="File">NavRight.png</Object>
+    <Object Type="File">Statistics.png</Object>
+    <Object Type="File">PDF.png</Object>
+    <Object Type="File">Status.png</Object>
+    <Object Type="File">Text.png</Object>
+    <Object Type="File">GraphicUI.png</Object>
+    <Object Type="File">NavLeft.png</Object>
+    <Object Type="File">Options.png</Object>
+    <Object Type="File">Button.png</Object>
+    <Object Type="File">Home.png</Object>
+    <Object Type="File">Clients.png</Object>
+    <Object Type="File">SDM.png</Object>
+    <Object Type="File">Table.png</Object>
+    <Object Type="File">HTML.png</Object>
+    <Object Type="File">UserLimits.png</Object>
+    <Object Type="File">DayNight.png</Object>
+    <Object Type="File">Styles.png</Object>
+    <Object Type="File">Expression.png</Object>
+    <Object Type="File">Keyboard.png</Object>
+    <Object Type="File">Recipe.png</Object>
+    <Object Type="File">FavoriteWatch.png</Object>
+    <Object Type="File">Profile.png</Object>
+  </Objects>
+</Package>

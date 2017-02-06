@@ -1,0 +1,5 @@
+VAR
+	graphValue : ARRAY[0..9] OF REAL := [10,20,40,60,80,100,120,140,180,40];
+	value : REAL;
+	i : INT;
+END_VAR

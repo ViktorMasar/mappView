@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentWidgets" height="840" width="1600" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="Label_ButtonHeader" top="290" left="-85" width="300" height="110" zIndex="0" multiLine="true" text="$Page.Widgets" wordWrap="true" rotation="270deg" fontSize="48px" style="Title1" />
+    <Widget xsi:type="widgets.brease.Image" id="Image_HeaderButton" top="500" left="10" width="66" height="66" zIndex="1" image="Media/Images_64/DarkPNGSymbols/GraphicUI.png" rotation="270deg" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationHome" top="750" left="780" width="80" height="80" zIndex="78" image="Media/Images_64/DarkPNGSymbols/Home.png" pageId="NavigationPage" style="transparent" />
+    <Widget xsi:type="widgets.brease.TabControl" id="TabControl1" top="100" left="200" width="1200" height="600" zIndex="79">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem1" left="0" width="200" height="30" zIndex="0" text="$Widgets.Tab.First">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.Button" id="Button1" top="65" left="20" width="130" height="55" zIndex="0" text="Button" style="defaultSmall" />
+            <Widget xsi:type="widgets.brease.Button" id="Button2" top="65" left="180" width="130" height="55" zIndex="1" image="Media/Symbols/DarkSVGSymbols/Symbols/Service.svg" text="Button" style="defaultSmall" />
+            <Widget xsi:type="widgets.brease.Button" id="Button3" top="65" left="340" width="130" height="55" zIndex="2" image="Media/Symbols/DarkSVGSymbols/Symbols/Service.svg" style="defaultSmall" />
+            <Widget xsi:type="widgets.brease.CheckBox" id="CheckBox1" top="170" left="40" width="160" height="30" zIndex="3" text="CheckBox1" />
+            <Widget xsi:type="widgets.brease.CheckBox" id="CheckBox2" top="210" left="40" width="160" height="30" zIndex="4" text="CheckBox2" />
+            <Widget xsi:type="widgets.brease.CheckBox" id="CheckBox3" top="250" left="40" width="160" height="30" zIndex="5" text="CheckBox3" />
+            <Widget xsi:type="widgets.brease.CheckBox" id="CheckBox4" top="290" left="40" width="160" height="30" zIndex="6" text="CheckBox4" />
+            <Widget xsi:type="widgets.brease.RadioButtonGroup" id="RadioButtonGroup1" top="165" left="200" width="180" height="170" zIndex="7" childPositioning="relative">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.RadioButton" id="RadioButton1" top="0" left="0" width="150" height="30" zIndex="0" text="RadioButton1" margin="5px" />
+                <Widget xsi:type="widgets.brease.RadioButton" id="RadioButton2" top="0" left="0" width="150" height="30" zIndex="1" text="RadioButton2" margin="5px" />
+                <Widget xsi:type="widgets.brease.RadioButton" id="RadioButton3" top="0" left="0" width="150" height="30" zIndex="2" text="RadioButton3" margin="5px" />
+                <Widget xsi:type="widgets.brease.RadioButton" id="RadioButton4" top="0" left="0" width="150" height="30" zIndex="3" text="RadioButton4" margin="5px" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBox1" top="350" left="40" width="140" height="34" zIndex="8" dataProvider="[{'value':0,'text':'Item 0'},{'value':1,'text':'Item 1'},{'value':2,'text':'Item 2'}]" />
+            <Widget xsi:type="widgets.brease.ListBox" id="ListBox1" top="430" left="40" width="140" height="120" zIndex="9" dataProvider="[{'value':0,'text':'List item 0'},{'value':1,'text':'List item 1'},{'value':2,'text':'List item 2'},{'value':3,'text':'List item 3'}]" />
+            <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="60" left="540" width="460" height="75" zIndex="10" alignment="horizontal" childPositioning="relative">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="0" left="0" width="140" height="50" zIndex="0" text="ToggleButton1" margin="5px" style="Command" />
+                <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton2" top="0" left="0" width="140" height="50" zIndex="1" text="ToggleButton2" margin="5px" style="Command" />
+                <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton3" top="0" left="0" width="140" height="50" zIndex="2" text="ToggleButton3" margin="5px" style="Command" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="190" left="545" width="100" height="30" zIndex="11" style="Input" />
+            <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="235" left="545" width="100" height="30" zIndex="12" style="Input" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="190" left="735" width="100" height="30" zIndex="13" style="Output" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="235" left="735" width="100" height="30" zIndex="14" style="Output" />
+            <Widget xsi:type="widgets.brease.Label" id="Label1" top="300" left="545" width="80" height="30" zIndex="15" text="Label1" />
+            <Widget xsi:type="widgets.brease.Label" id="Label2" top="340" left="545" width="80" height="30" zIndex="16" text="Label2" style="Title1" />
+            <Widget xsi:type="widgets.brease.Label" id="Label3" top="380" left="545" width="80" height="30" zIndex="17" text="Label3" style="Title2" />
+            <Widget xsi:type="widgets.brease.Label" id="Label4" top="420" left="545" width="80" height="30" zIndex="18" text="Label4" style="Title3" />
+            <Widget xsi:type="widgets.brease.DateTimeInput" id="DateTimeInput1" top="380" left="685" width="315" height="30" zIndex="19" />
+            <Widget xsi:type="widgets.brease.DateTimeOutput" id="DateTimeOutput1" top="420" left="685" width="315" height="30" zIndex="20" />
+            <Widget xsi:type="widgets.brease.ToggleSwitch" id="ToggleSwitch1" top="490" left="545" width="115" height="30" zIndex="21" mouseDownText="On" text="Off" />
+            <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton4" top="420" left="340" width="130" height="130" zIndex="22" mouseDownText="Off" text="On" cornerRadius="999px" fontSize="30px" />
+            <Widget xsi:type="widgets.brease.BasicSlider" id="BasicSlider1" top="453" left="735" width="290" height="116" zIndex="23" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" maxValue="10000" showTickNumbers="true" showValueDisplay="true" thumbSize="25" valueDisplaySize="50" padding="20px" fontSize="16px" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" width="200" height="30" zIndex="1" text="$Widgets.Tab.Second">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox1" top="50" left="20" width="500" height="258" zIndex="0" text="$Widgets.Gp.Absolute">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.Label" id="Label5" top="23" left="35" width="80" height="30" zIndex="0" text="Label A" />
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput3" top="23" left="161" width="100" height="30" zIndex="1" />
+                <Widget xsi:type="widgets.brease.Button" id="Button4" top="23" left="302" width="100" height="30" zIndex="2" text="Button A" style="defaultSmall" />
+                <Widget xsi:type="widgets.brease.Label" id="Label6" top="90" left="35" width="80" height="30" zIndex="3" text="Label B" />
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput4" top="90" left="161" width="100" height="30" zIndex="4" />
+                <Widget xsi:type="widgets.brease.Button" id="Button5" top="90" left="302" width="100" height="30" zIndex="5" text="Button B" style="defaultSmall" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox2" top="50" left="560" width="500" height="258" zIndex="1" childPositioning="relative" text="$Widgets.Gp.Relative">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.Label" id="Label7" top="0" left="0" width="80" height="30" zIndex="0" text="Label A" margin="20px" />
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput5" top="0" left="0" width="100" height="30" zIndex="1" margin="20px" />
+                <Widget xsi:type="widgets.brease.Button" id="Button6" top="0" left="0" width="100" height="30" zIndex="2" text="Button A" margin="20px" style="defaultSmall" />
+                <Widget xsi:type="widgets.brease.Label" id="Label8" top="0" left="0" width="80" height="30" zIndex="3" text="Label B" margin="20px" />
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput6" top="0" left="0" width="100" height="30" zIndex="4" margin="20px" />
+                <Widget xsi:type="widgets.brease.Button" id="Button7" top="0" left="0" width="100" height="30" zIndex="5" text="Button B" margin="20px" style="defaultSmall" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.CheckBox" id="CheckBox5" top="380" left="34" width="280" height="30" zIndex="2" text="$IAT/Widgets.Disable" value="true" fontSize="18px" />
+            <Widget xsi:type="widgets.brease.CheckBox" id="CheckBox6" top="420" left="34" width="280" height="30" zIndex="3" text="$IAT/Widgets.GP1.Visible" value="true" fontSize="18px" />
+            <Widget xsi:type="widgets.brease.CheckBox" id="CheckBox7" top="460" left="34" width="280" height="30" zIndex="4" text="$IAT/Widgets.GP1.Enable" value="true" fontSize="18px" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem3" left="0" width="200" height="30" zIndex="2" text="$Widgets.Tab.Third">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.RadialGauge" id="RadialGauge1" top="50" left="60" width="240" height="240" zIndex="0" text="RadialGauge1" />
+            <Widget xsi:type="widgets.brease.RadialGauge" id="RadialGauge2" top="310" left="60" width="240" height="240" zIndex="1" text="RadialGauge2" style="Gauge2_to80_green" />
+            <Widget xsi:type="widgets.brease.Image" id="Image1" top="70" left="380" width="600" height="190" zIndex="2" image="Media/BackGround/mappView.png" />
+            <Widget xsi:type="widgets.brease.BasicSlider" id="Slider1" top="310" left="380" width="320" height="40" zIndex="3" thumbSize="30" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem4" left="0" width="200" height="30" zIndex="3" text="$Widgets.Tab.Fourth">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.MeasurementSystemSelector" id="MeasurementSystemSelector1" top="90" left="60" width="120" height="50" zIndex="0" />
+            <Widget xsi:type="widgets.brease.LanguageSelector" id="LanguageSelector1" top="170" left="60" width="120" height="50" zIndex="1" />
+            <Widget xsi:type="widgets.brease.LoginInfo" id="LoginInfo1" top="270" left="400" width="160" height="30" zIndex="2" />
+            <Widget xsi:type="widgets.brease.Login" id="Login1" top="90" left="400" width="300" height="160" zIndex="3" />
+            <Widget xsi:type="widgets.brease.LogoutButton" id="LogoutButton1" top="270" left="600" width="140" height="30" zIndex="4" text="LogoutButton1" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem5" left="0" width="100" height="30" zIndex="4" text="TabItem5" visible="false">
+          <Widgets />
+        </Widget>
+      </Widgets>
+    </Widget>
+  </Widgets>
+</Content>

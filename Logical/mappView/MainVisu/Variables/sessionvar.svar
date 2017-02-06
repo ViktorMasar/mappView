@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VariablesSet  id="SessionVariablesMain" xmlns="http://www.br-automation.com/iat2015/session/engineering/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<Variables>
+	
+	
+		<!--apps-->
+	  	<Variable name="App1" scope="session" xsi:type="BOOL" value="true" />
+		<Variable name="App2" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App3" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App4" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App5" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App6" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App7" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App8" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App9" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App10" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App11" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App12" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App13" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App14" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App15" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App16" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App17" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App18" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App19" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App20" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App21" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App22" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App23" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App24" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App25" scope="session"  xsi:type="BOOL" value="true" />
+		<Variable name="App26" scope="session"  xsi:type="BOOL" value="true" />
+		
+
+		<Variable name="CloseAndLogout" scope="session"  xsi:type="BOOL" value="false" />
+		<Variable name="MachineState" scope="session"  xsi:type="ANY_INT" value="0" />
+		<Variable name="DayNightTheme" scope="session"  xsi:type="ANY_INT" value="0" />
+		<Variable name="DayNight" scope="session"  xsi:type="BOOL" value="false" />
+		
+		<Variable name="Expression1" scope="session"  xsi:type="BOOL" value="false" />
+		<Variable name="Expression2" scope="session"  xsi:type="BOOL" value="false" />
+		<Variable name="Expression3" scope="session"  xsi:type="ANY_INT" value="0" />
+		<Variable name="ServiceSelect" scope="session" xsi:type="ANY_INT" value="0" />
+		
+		<Variable name="KeyVariable" scope="session" xsi:type="ANY_INT" value="0" />
+	</Variables>
+</VariablesSet>

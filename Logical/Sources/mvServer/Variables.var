@@ -1,0 +1,4 @@
+VAR
+	sIPaddr : STRING[16];
+	CfgGetIPAddr_0 : CfgGetIPAddr := (0);
+END_VAR

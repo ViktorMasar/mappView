@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentHeaderNavigation" height="60" width="1600" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+		<Widget xsi:type="widgets.brease.FlyOut" id="FlyOut1" height="700" width="300" left="0" top="0" buttonHeight="40" buttonWidth="40" docking="top" buttonOffset="10" autoClose="true" 
+			image="Media/Images_32/DarkPNGSymbols/Gallery.png" style="transparent" buttonStyle="transparent" backGroundGradient="linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.45) 85%, rgba(0,0,0,00) 100%)" zIndex="1">
+			<Widgets>
+						
+				<Widget xsi:type="widgets.brease.Label" id="Label1" text="$Page.FlyoutApps" height="30" width="290" left="5" top="670" style="Title1" zIndex="24" />
+				<!--
+				30, 110, 190 left
+				50, 130, 210, 290, 370, 450, 530 top-->		
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp1" 
+					height="70" width="70" left="30" top="50" 
+				image="Media/Images_64/WhitePNGSymbols/GraphicUI.png" style="Operate" zIndex="0" />
+			
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp2" 
+					height="70" width="70" left="30" top="130" 
+				image="Media/Images_64/WhitePNGSymbols/Table.png" style="Operate" zIndex="1" />
+					
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp3" 
+					height="70" width="70" left="30" top="210" 
+				image="Media/Images_64/WhitePNGSymbols/PDF.png" style="Operate" zIndex="2" />
+						
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp4" 
+					height="70" width="70" left="30" top="290" 
+				image="Media/Images_64/WhitePNGSymbols/UserLimits.png" style="Operate" zIndex="3" />		
+				
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp5" 
+					height="70" width="70" left="30" top="370" 
+				image="Media/Images_64/WhitePNGSymbols/User.png" style="Operate" zIndex="4" />		
+				
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp6" 
+					height="70" width="70" left="30" top="450" 
+				image="Media/Images_64/WhitePNGSymbols/Clients.png" style="Operate" zIndex="5" />
+					
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp7" 
+					height="70" width="70" left="30" top="530" 
+				image="Media/Images_64/WhitePNGSymbols/HTML.png" style="Operate" zIndex="6" />
+				
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp8" 
+					height="70" width="70" left="110" top="50" 
+				image="Media/Images_64/WhitePNGSymbols/Touch.png" style="Operate" zIndex="7" />
+				
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp9" 
+					height="70" width="70" left="110" top="130" 
+				image="Media/Images_64/WhitePNGSymbols/Movie.png" style="Operate" zIndex="8" />
+				
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp10" 
+					height="70" width="70" left="110" top="210" 
+				image="Media/Images_64/WhitePNGSymbols/Text.png" style="Operate" zIndex="9" />
+				
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp11" 
+					height="70" width="70" left="110" top="290" 
+				image="Media/Images_64/WhitePNGSymbols/Gallery.png" style="Operate" zIndex="10" />
+				
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp12" 
+					height="70" width="70" left="110" top="370" 
+				image="Media/Images_64/WhitePNGSymbols/Options.png" style="Operate" zIndex="11" />
+				
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp13" 
+					height="70" width="70" left="110" top="450" 
+				image="Media/Images_64/WhitePNGSymbols/DayNight.png" style="Operate" zIndex="12" />
+				
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp14" 
+					height="70" width="70" left="110" top="530" 
+				image="Media/Images_64/WhitePNGSymbols/Styles.png" style="Operate" zIndex="13" />
+				
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp15" 
+					height="70" width="70" left="190" top="50" 
+				image="Media/Images_64/WhitePNGSymbols/Expression.png" style="Operate" zIndex="14" />
+				
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp16" 
+					height="70" width="70" left="190" top="130" 
+				image="Media/Images_64/WhitePNGSymbols/Keyboard.png" style="Operate" zIndex="15" />
+				
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp17" 
+					height="70" width="70" left="190" top="210" 
+					image="Media/Images_64/WhitePNGSymbols/LineChart.png" style="Operate" zIndex="16"/>
+						
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp18" 
+					height="70" width="70" left="190" top="290" 
+				image="Media/Images_64/WhitePNGSymbols/FavoriteWatch.png" style="Operate" zIndex="17"/>
+						
+				<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleApp19" 
+					height="70" width="70" left="190" top="370" 
+				image="Media/Images_64/WhitePNGSymbols/Profile.png" style="Operate" zIndex="18"/>
+						
+			</Widgets>
+		</Widget>
+	
+	 </Widgets>
+</Content>

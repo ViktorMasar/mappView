@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.2.7.54 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Simulation.binding</Object>
+    <Object Type="File">Navigation.binding</Object>
+    <Object Type="File">SystemInfo.binding</Object>
+    <Object Type="File">ClientInfoPage.binding</Object>
+    <Object Type="File">Table.binding</Object>
+    <Object Type="File">Expression.binding</Object>
+    <Object Type="File">ListBinding.binding</Object>
+    <Object Type="Package">MainVisuEvents</Object>
+    <Object Type="File">Keyboard.binding</Object>
+    <Object Type="File">Chart.binding</Object>
+    <Object Type="File">Mobile.binding</Object>
+    <Object Type="File">ProfileGen.binding</Object>
+    <Object Type="File">FavoriteWatch.binding</Object>
+    <Object Type="File">OPCData.binding</Object>
+  </Objects>
+</Package>

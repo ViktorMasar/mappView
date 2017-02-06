@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="mAlarmContent" height="768" width="1024" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButton1" top="688" left="0" width="145" height="80" zIndex="0" image="Media/Images_64/DarkPNGSymbols/NavLeft.png" pageId="mServiceMain" text="$IAT/mobile/Back" textAlign="right" fontSize="20px" style="transparent" />
+    <Widget xsi:type="widgets.brease.DateTimeOutput" id="DateTimeOutput1" top="112" left="74" width="360" height="30" zIndex="1" textColor="rgba(0, 128, 255, 1)" padding="5px" />
+    <Widget xsi:type="widgets.brease.LoginInfo" id="LoginInfo1" top="59" left="251" width="234" height="45" zIndex="2" textColor="rgba(0, 128, 255, 1)" fontSize="32px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="59" left="74" width="190" height="45" zIndex="3" text="$IAT/mobile/Welcome" textColor="rgba(0, 128, 255, 1)" fontSize="32px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="59" left="771" width="190" height="45" zIndex="4" text="$IAT/mobile/Alarm" textColor="rgba(0, 128, 255, 1)" textAlign="right" fontSize="32px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="353" left="296" width="433" height="62" zIndex="5" text="implementation of mappAlarmX" textAlign="center" rotation="-30deg" fontSize="24px" bold="true" />
+  </Widgets>
+</Content>

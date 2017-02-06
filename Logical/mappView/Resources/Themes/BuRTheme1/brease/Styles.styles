@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Styles id="AdditionalStyles" xmlns="http://www.br-automation.com/iat2015/styles/engineering/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	
+	<Style id="LoginBackground" xsi:type="widgets.brease.Rectangle" borderWidth="2px" cornerRadius="10px" backColor="rgba(81,150,175,0.4)" lineColor="#396D80" borderStyle="solid" />
+
+	<Style id="IndicateState" xsi:type="widgets.brease.Button" fontSize="16px" bold="true" textColor="#474747" mouseDownTextColor="#FFFFFF" cornerRadius="8px" borderWidth="2px" borderColor="rgba(255, 0, 0, 0.5)" mouseDownBorderWidth="0px 0px 0px 0px" backGroundGradient="linear-gradient(to bottom,#F7F7F7 0%,#C6C6C6 100%)" mouseDownBackGroundGradient="linear-gradient(to bottom, #4A4A4A 0%,#7C7C7C 100%) " disabledBackGroundGradient="linear-gradient(to bottom, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%)" shadow="4px 4px 14px 0px rgba(62, 79, 92, 0.75)" mouseDownShadow="2px 2px 8px 0px rgba(62, 79, 92, 0.75)" />
+
+	<Style id="IndicateState" xsi:type="widgets.brease.NumericOutput" borderWidth="2px" borderColor="#FF0000" textColor="#FFFFFF" fontSize="32px" backGroundGradient="linear-gradient(to bottom, rgba(243,197,189,1) 0%,rgba(232,108,87,1) 50%,rgba(234,40,3,1) 51%,rgba(255,102,0,1) 75%,rgba(199,34,0,1) 100%)" bold="true" />
+
+	<Style id="transparent" xsi:type="widgets.brease.LoginButton" backColor="transparent" borderWidth="0px" mouseDownBackColor="transparent" mouseDownBorderWidth="0px" fontSize="16px" bold="true" textColor="#474747" />
+
+	<Style id="transparent" xsi:type="widgets.brease.LogoutButton" 
+		backColor="transparent" 
+		borderWidth="0px" 
+		mouseDownBackColor="transparent" 
+		mouseDownBorderWidth="0px" 
+		fontSize="16px" bold="true" 
+		textColor="#474747" />
+
+	
+	<Style id="default" xsi:type="widgets.brease.FavoriteWatch"
+		
+		backColor="transparent"
+		backGroundGradient="none"
+		borderColor="#000000"
+		borderWidth="2px"
+		borderStyle="none"
+		
+		boxBackColor="transparent"
+		boxBackGroundGradient="linear-gradient(to bottom, rgba(71,71,71,1) 0%,rgba(128,128,128,0.97) 20%,rgba(26,26,26,0.86) 100%)" 
+		boxBorderColor="transparent"
+		boxBorderWidth="2px"
+		boxBorderStyle="solid"
+		
+		boxSelectedValidBackColor="transparent"
+		boxSelectedValidBackGroundGradient="linear-gradient(to bottom, rgba(252,183,0,1) 0%,rgba(255,133,0,1) 100%)" 
+		boxSelectedValidBorderColor="transparent"
+		boxSelectedValidBorderWidth="2px"
+		boxSelectedValidBorderStyle="solid"
+		
+		boxSelectedInvalidBackColor="transparent"
+		boxSelectedInvalidBackGroundGradient="linear-gradient(to bottom, rgba(255,101,37,1) 0%,rgba(255,0,0,1) 100%)" 
+		boxSelectedInvalidBorderColor="transparent"
+		boxSelectedInvalidBorderWidth="2px"
+		boxSelectedInvalidBorderStyle="solid"
+		
+	/>
+	
+	<Style id="FavoriteWatch" xsi:type="widgets.brease.Label"
+		fontSize="14px"
+		textColor="#474747"
+		backColor="#ff8500"
+		borderStyle="none"
+		padding="5px"
+	/>
+	
+	<Style id="FavoriteWatch" xsi:type="widgets.brease.NumericOutput"
+		textColor="#FFFFFF"
+		borderWidth="0px"
+		fontSize="16px"
+		backColor="transparent"
+		bold="true"
+	/>
+	
+	<Style id="FavoriteWatch" xsi:type="widgets.brease.NumericInput"
+		textColor="#000000"
+		borderWidth="1px"
+		cornerRadius="5px"
+		fontSize="16px"
+		backColor="#FFFFFF"
+		bold="true"
+	/>
+
+</Styles>
