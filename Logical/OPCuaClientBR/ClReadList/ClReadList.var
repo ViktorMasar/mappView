@@ -57,3 +57,9 @@ VAR CONSTANT
 	VM_MAX_ARRAY_INDEXES : USINT := 7;
 	VM_MAX_NODEIDS_INDEXES : USINT := 63;
 END_VAR
+VAR
+	caseClientReadList : caseOpcUaClient;
+	btnStart : BOOL;
+	lastCase : caseOpcUaClient;
+	btnStop : BOOL;
+END_VAR

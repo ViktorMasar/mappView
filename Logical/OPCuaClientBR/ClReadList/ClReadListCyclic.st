@@ -16,7 +16,7 @@ PROGRAM _INIT
 	VarB[2] := 0;
 	VarB[3] := 0;
 	VarC := 0; 
-	NamespaceIndex := 2; // 2 jenom pro Rexroth
+	NamespaceIndex := 2; // 2 jenom pro Rexroth,  BR ma 6
 	nbVarToRead := VM_MAX_NODEIDS_INDEXES;
 	
 	FOR i:= 0 TO VM_MAX_NODEIDS_INDEXES DO
@@ -543,132 +543,105 @@ END_PROGRAM
       
 PROGRAM _CYCLIC
 
-	(* UA_Connect - establish connection to OPC-UA Server *)
-
-
-
-	UA_Connect_0(Execute := ExecuteConnect_0,
-		ServerEndpointUrl := 'opc.tcp://172.025.015.066:4840', //'opc.tcp://172.025.015.066:4840'
-		SessionConnectInfo := SessionConnectInfo_0,
-		Timeout := T#10s);
-	IF (UA_Connect_0.Busy = 0) THEN
-		ExecuteConnect_0 := 0;
-		IF (UA_Connect_0.Done = 1) THEN
-			ErrorID := 0;
-			ConnectionHdl := UA_Connect_0.ConnectionHdl;
-		END_IF
-		IF (UA_Connect_0.Error = 1) THEN
-			ErrorID := UA_Connect_0.ErrorID;
-			ConnectionHdl := 0;
-		END_IF
-	END_IF
-
-	(* UA_GetNamespaceIndex - read index of required namespace for PVs *)
-	(* puvodne... NamespaceUri := 'urn:B&R/pv/' *)
 	
-	UA_GetNamespaceIndex_0(Execute := ExecuteGetnamespaceindex_0,
-		ConnectionHdl := ConnectionHdl,
-		NamespaceUri := 'http://www.boschrexroth.com/IndraLogic',
-		Timeout := T#5s); //'urn:B&R/pv/' 
-	IF (UA_GetNamespaceIndex_0.Busy = 0) THEN
-		ExecuteGetnamespaceindex_0 := 0;
-		IF (UA_GetNamespaceIndex_0.Done = 1) THEN
-			ErrorID:= 0;
-			NamespaceIndex := UA_GetNamespaceIndex_0.NamespaceIndex;
-		END_IF
-		IF (UA_GetNamespaceIndex_0.Error = 1) THEN
-			ErrorID:= UA_GetNamespaceIndex_0.ErrorID;
-			NamespaceIndex := 0;
-		END_IF
-	END_IF
+(* State machine for OPC UA Client *)
+			(* In case of ERROR *)
+	IF ErrorID <> 0 THEN
+		lastCase			:= caseClientReadList;
+		caseClientReadList	:= ERROR;
+	END_IF;
+	
+	CASE caseClientReadList OF
+
+		WAIT:
+			IF btnStart THEN
+				btnStart							:= FALSE;
+				caseClientReadList					:= UA_CONNECT;
+			END_IF;
 		
-	(* UA_NodeGetHandleList - get handles for required nodes *)
+		UA_CONNECT:
+			ExecuteConnect_0						:= TRUE;
+			Connect;
+			IF UA_Connect_0.Done THEN
+				caseClientReadList					:= UA_GET_NAME_SPACE_INDEX;
+				ExecuteConnect_0					:= FALSE;
+			END_IF;
+		
+		UA_GET_NAME_SPACE_INDEX:
+			ExecuteGetnamespaceindex_0				:= TRUE;
+			GetNameSpaceIndex;
+			IF UA_GetNamespaceIndex_0.Done THEN
+				ExecuteGetnamespaceindex_0			:= FALSE;
+				caseClientReadList					:= UA_NODE_GET_HANDLE_LIST;
+			END_IF;
+		
+		UA_NODE_GET_HANDLE_LIST:
+			ExecuteNodeGetHandleList_0				:= TRUE;
+			NodeGetHandleList;
+			IF UA_NodeGetHandleList_0.Done THEN
+				ExecuteNodeGetHandleList_0			:= FALSE;
+				caseClientReadList					:= UA_READ_LIST_ON;
+			END_IF;
+		
+		UA_READ_LIST_ON:
+			ExecuteReadList_0						:= TRUE;
+			ReadList;
+			IF UA_ReadList_0.Done THEN
+				ExecuteReadList_0					:= FALSE;
+				caseClientReadList					:= UA_READ_LIST_OFF;
+			END_IF;
+		
+		UA_READ_LIST_OFF:
+			ExecuteReadList_0						:= FALSE;
+			ReadList;
+			IF (NOT UA_ReadList_0.Busy) AND (NOT UA_ReadList_0.Done) THEN
+				caseClientReadList					:= UA_READ_LIST_ON;
+				IF btnStop THEN
+					btnStop							:= FALSE;
+					caseClientReadList				:= UA_NODE_RELEASE_HANDLE_LIST;
+				END_IF;
+			END_IF;
 
-	UA_NodeGetHandleList_0(Execute := ExecuteNodeGetHandleList_0,
-		ConnectionHdl := ConnectionHdl,
-		NodeIDCount := nbVarToRead,
-		NodeIDs := NodeIDs_0,
-		Timeout := T#10s); //NodeIDCount := VM_MAX_NODEIDS_INDEXES
-	IF (UA_NodeGetHandleList_0.Busy = 0) THEN
-		ExecuteNodeGetHandleList_0 := 0;
-		IF (UA_NodeGetHandleList_0.Done = 1) THEN
-			ErrorID:= 0;
-			NodeHdls := UA_NodeGetHandleList_0.NodeHdls;
-		END_IF
-		IF (UA_NodeGetHandleList_0.Error = 1) THEN
-			ErrorID:= UA_NodeGetHandleList_0.ErrorID;
-			NodeHdls[0] := 0;
-		END_IF
-	END_IF			
-	
-	(* UA_ReadList - read required nodes from OPC-UA Server and write it in local plc variables *)
+		
+		UA_NODE_RELEASE_HANDLE_LIST:
+			ExecuteNodeReleaseHandleList_0			:= TRUE;
+			NodeReleaseList;
+			IF UA_NodeReleaseHandleList_0.Done THEN
+				ExecuteNodeReleaseHandleList_0		:= FALSE;
+				caseClientReadList					:= UA_DISCONNECT;
+			END_IF;
+		
+		UA_DISCONNECT:
+			ExecuteDisconnect_0						:= TRUE;
+			Disconnect;
+			IF UA_Disconnect_0.Done THEN
+				ExecuteDisconnect_0					:= FALSE;
+				caseClientReadList					:= WAIT;
+			END_IF;
+		
+		
+		ERROR:
+			ExecuteConnect_0						:= FALSE;
+			ExecuteGetnamespaceindex_0				:= FALSE;
+			ExecuteNodeGetHandleList_0				:= FALSE;
+			ExecuteReadList_0						:= FALSE;
+			ExecuteNodeReleaseHandleList_0			:= FALSE;
+			ExecuteDisconnect_0						:= FALSE;
+		
+			Connect;
+			GetNameSpaceIndex;
+			NodeGetHandleList;
+			ReadList;
+			NodeReleaseList;
+			Disconnect;
+			IF btnStart THEN
+				ErrorID								:= 0;
+				caseClientReadList					:= WAIT;				
+			END_IF;
+		
+		
+		
+	END_CASE;
 
-	IF ((vmWasDone = 1) AND (UA_ReadList_0.Done = 0)) THEN
-		ExecuteReadList_0	:= TRUE;
-		vmWasDone			:= FALSE;
-		vmReadList_0Counter	:= vmReadList_0Counter + 1;
-	END_IF;
-
-	UA_ReadList_0(Execute := ExecuteReadList_0,
-		ConnectionHdl := ConnectionHdl,
-		NodeHdlCount := nbVarToRead,
-		NodeHdls := NodeHdls,
-		NodeAddInfo := NodeAddInfo_0,
-		Timeout := T#10s,
-		Variables := Variables_Rd0); //NodeHdlCount := VM_MAX_NODEIDS_INDEXES
-	IF (UA_ReadList_0.Busy = 0) THEN
-		ExecuteReadList_0 := 0;
-		IF (UA_ReadList_0.Done = 1) THEN
-			ErrorID		:= 0;
-			vmWasDone	:= TRUE;
-		END_IF
-		IF (UA_ReadList_0.Error = 1) THEN
-			ErrorID:= UA_ReadList_0.ErrorID;
-		END_IF
-	END_IF
 	
-	
-	//Mereni poctu komunikaci za sekundu
-	IF UA_ReadList_0.TimeStamps[0] <> lastTime THEN
-		lastTime := UA_ReadList_0.TimeStamps[0];
-		pocetKomunkaci := vmReadList_0Counter;
-		vmReadList_0Counter := 0;
-	END_IF;
-
-	(* UA_NodeReleaseHandleList - release the handles for the nodes *)
-	
-    UA_NodeReleaseHandleList_0(Execute := ExecuteNodeReleaseHandleList_0,
-		ConnectionHdl := ConnectionHdl,
-		NodeHdlCount := nbVarToRead,
-		NodeHdls := NodeHdls,
-		Timeout := T#10s);
-	IF (UA_NodeReleaseHandleList_0.Busy = 0) THEN
-		ExecuteNodeReleaseHandleList_0 := 0;
-		IF (UA_NodeReleaseHandleList_0.Done = 1) THEN
-			ErrorID:= 0;
-			NodeHdls[0] := 0;
-//			NodeHdls[1] := 0;
-//			NodeHdls[2] := 0;
-		END_IF
-		IF (UA_NodeReleaseHandleList_0.Error = 1) THEN
-			ErrorID:= UA_NodeReleaseHandleList_0.ErrorID;
-		END_IF
-	END_IF
-	
-	(* UA_Disconnect - disconnect from OPC-UA Server *)
-	
-	UA_Disconnect_0(Execute := ExecuteDisconnect_0,
-		ConnectionHdl := ConnectionHdl,
-		Timeout := T#10s);
-	IF (UA_Disconnect_0.Busy = 0) THEN
-		ExecuteDisconnect_0 := 0;
-		IF (UA_Disconnect_0.Done = 1) THEN
-			ErrorID:= 0;
-			ConnectionHdl := 0;
-		END_IF
-		IF (UA_Disconnect_0.Error = 1) THEN 
-			ErrorID:= UA_Disconnect_0.ErrorID;
-		END_IF
-	END_IF
-
 END_PROGRAM
