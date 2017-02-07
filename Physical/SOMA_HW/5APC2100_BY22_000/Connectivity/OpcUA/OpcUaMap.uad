@@ -229,6 +229,16 @@
           </Variable>
         </Variable>
       </Task>
+      <Task Name="ClReadList">
+        <Variable Name="btnStart" Enable="True" />
+        <Variable Name="ExecuteConnect_0" Enable="True" />
+        <Variable Name="ExecuteDisconnect_0" Enable="True" />
+        <Variable Name="ExecuteGetnamespaceindex_0" Enable="True" />
+        <Variable Name="ExecuteNodeGetHandleList_0" Enable="True" />
+        <Variable Name="ExecuteNodeReleaseHandleList_0" Enable="True" />
+        <Variable Name="ExecuteReadList_0" Enable="True" />
+        <Variable Name="readList" Enable="True" EnableArrayElements="True" />
+      </Task>
       <Task Name="mvClient">
         <Variable Name="clientSlots" Enable="True" EnableArrayElements="True" />
       </Task>

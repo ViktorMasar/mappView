@@ -3,8 +3,7 @@
 <Physical xmlns="http://br-automation.co.at/AS/Physical">
   <Objects>
     <Object Type="Configuration">ARsim</Object>
-    <Object Type="Configuration">PPC1</Object>
+    <Object Type="Configuration">SOMA_HW</Object>
     <Object Type="Configuration">PPC_VM</Object>
-    <Object Type="Configuration">PPC2100</Object>
   </Objects>
 </Physical>

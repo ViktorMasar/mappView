@@ -1,0 +1,24 @@
+Projek je vytvoren pro firmu SOMA.
+
+V Configuration View je aktivní konfigurace "SOMA_HW".
+- APC2100-BY22-00
+-- 5ACCLI01.SDL0-000
+--- 5AP5130.215C-000
+
+IP Adresy v tomto projektu:
+172.25.15.66 - OPC UA Server - Rexroth
+172.25.15.67 - OPC UA Client a Visualizace - ARwin na B&R APC2100
+172.25.15.68 - Windows, ETH1 interface
+Maska:
+255.255.240.0
+Pokud jsou vaše adresy jiné, tak je mužete zmenit.
+POZOR! program "ClReadList" se spojuje s pevne nastavenou adresou 172.25.15.66 - OPC UA Server - Rexroth
+
+Visualizace:
+- Zpust na APC Google Chrome.
+- Zadej http://172.25.15.67:81/index.html?visuid=mvHighlight, viz. dokumentace v PDF v tomto adresári.
+- Mužeš/Nemusíš se zalogovat (Continue without autentication)
+- Zmáckni OPC Data
+- Pro nastartování komunikace zmáckni tlacítko Connect.
+- Stav komunikace lze sledovat ve Watch programu "ClReadList".
+
