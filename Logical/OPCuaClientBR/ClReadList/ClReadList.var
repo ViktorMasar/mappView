@@ -1,0 +1,59 @@
+(********************************************************************
+ * COPYRIGHT -- Bernecker + Rainer
+ ********************************************************************
+ * Program: Client01b
+ * File: Client01b.var
+ * Author: mayrk
+ * Created: July 03, 2014
+ ********************************************************************
+ * Local variables of program Sample01
+ ********************************************************************)
+VAR
+	ConnectionHdl : DWORD := 0;
+	ErrorID : DWORD;
+	ExecuteConnect_0 : BOOL;
+	ExecuteDisconnect_0 : BOOL;
+	ExecuteGetnamespaceindex_0 : BOOL;
+	ExecuteNodeGetHandleList_0 : BOOL;
+	ExecuteNodeReleaseHandleList_0 : BOOL;
+	ExecuteReadList_0 : BOOL;
+	i : USINT;
+	indexString : STRING[3];
+	j : USINT;
+	k : USINT;
+	lastTime : DATE_AND_TIME;
+	NamespaceIndex : UINT := 0;
+	nbVarToRead : UINT := 1;
+	NodeAddInfo_0 : ARRAY[0..VM_MAX_NODEIDS_INDEXES] OF UANodeAdditionalInfo;
+	NodeHdls : ARRAY[0..VM_MAX_NODEIDS_INDEXES] OF DWORD;
+	NodeIDs_0 : ARRAY[0..VM_MAX_NODEIDS_INDEXES] OF UANodeID;
+	nxtAdr : UDINT;
+	pocetKomunkaci : USINT;
+	readList : ARRAY[0..VM_MAX_ARRAY_INDEXES] OF rexrothRaportType;
+	SessionConnectInfo_0 : UASessionConnectInfo;
+	UA_Connect_0 : UA_Connect;
+	UA_Disconnect_0 : UA_Disconnect;
+	UA_GetNamespaceIndex_0 : UA_GetNamespaceIndex;
+	UA_NodeGetHandleList_0 : UA_NodeGetHandleList;
+	UA_NodeReleaseHandleList_0 : UA_NodeReleaseHandleList;
+	UA_ReadList_0 : UA_ReadList;
+	Var : ARRAY[0..VM_MAX_NODEIDS_INDEXES] OF INT;
+	Var0 : INT;
+	Var1 : INT;
+	Var2 : INT;
+	Var3 : INT;
+	Var4 : INT;
+	Var5 : INT;
+	Var6 : INT;
+	Var7 : INT;
+	VarA : INT := 0;
+	VarB : ARRAY[0..1000] OF DINT;
+	VarC : INT := 0;
+	Variables_Rd0 : ARRAY[0..MAX_INDEX_NODELIST] OF STRING[255];
+	vmReadList_0Counter : USINT;
+	vmWasDone : BOOL := FALSE;
+END_VAR
+VAR CONSTANT
+	VM_MAX_ARRAY_INDEXES : USINT := 7;
+	VM_MAX_NODEIDS_INDEXES : USINT := 63;
+END_VAR

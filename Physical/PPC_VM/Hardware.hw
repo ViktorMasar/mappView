@@ -12,7 +12,6 @@
     </Connector>
     <Parameter ID="AutomationRuntime" Value="AR010" />
     <Parameter ID="ConfigurationID" Value="mvHighlight_1_1_PPC2100" />
-    <Parameter ID="RebootReset" Value="4" />
     <Parameter ID="TaskClassIdleTime" Value="1000" />
     <Parameter ID="Cyclic1Duration" Value="100000" />
     <Parameter ID="Cyclic1Tolerance" Value="100000" />

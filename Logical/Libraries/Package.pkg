@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.2.5.388?>
+<?AutomationStudio Version=4.2.7.54 SP?>
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="Library" Language="Binary" Description="This library contains function interfaces for IEC 61131-3 operator functions. For the most part, these are mathematical and logical functions.">operator</Object>
@@ -10,5 +10,6 @@
     <Object Type="Library" Language="Binary" Description="The AsBrStr Library contains FBKs for memory and character string handling.">AsBrStr</Object>
     <Object Type="Library" Language="Binary" Description="Advanced alarm management">MpAlarmX</Object>
     <Object Type="Library" Language="Binary" Description="MpCom Library">MpCom</Object>
+    <Object Type="Library" Language="Binary" Description="The AsOpcUac library supports communication with OPC-UA servers">AsOpcUac</Object>
   </Objects>
 </Package>

@@ -4,7 +4,75 @@
     <Widget xsi:type="widgets.brease.Label" id="Label_ButtonHeader" top="340" left="-80" width="250" height="55" zIndex="0" multiLine="true" text="$Page.OPCData" wordWrap="true" rotation="270deg" fontSize="48px" style="Title1" />
     <Widget xsi:type="widgets.brease.Image" id="Image_HeaderButton" top="500" left="10" width="66" height="66" zIndex="1" image="Media/Images_64/DarkPNGSymbols/Table.png" rotation="270deg" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationHome" top="750" left="780" width="80" height="80" zIndex="77" image="Media/Images_64/DarkPNGSymbols/Home.png" pageId="NavigationPage" style="transparent" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="200" left="200" width="100" height="30" zIndex="78" backColor="rgba(255, 165, 0, 1)" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="240" left="200" width="100" height="30" zIndex="79" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="200" left="320" width="100" height="30" zIndex="78" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput3" top="240" left="320" width="100" height="30" zIndex="79" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput4" top="280" left="320" width="100" height="30" zIndex="80" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput5" top="320" left="320" width="100" height="30" zIndex="81" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput6" top="360" left="320" width="100" height="30" zIndex="82" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput7" top="400" left="320" width="100" height="30" zIndex="83" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput8" top="440" left="320" width="100" height="30" zIndex="84" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput9" top="480" left="320" width="100" height="30" zIndex="85" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput10" top="200" left="440" width="100" height="30" zIndex="86" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput11" top="240" left="440" width="100" height="30" zIndex="87" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput12" top="280" left="440" width="100" height="30" zIndex="88" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput13" top="320" left="440" width="100" height="30" zIndex="89" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput14" top="360" left="440" width="100" height="30" zIndex="90" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput15" top="400" left="440" width="100" height="30" zIndex="91" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput16" top="440" left="440" width="100" height="30" zIndex="92" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput17" top="480" left="440" width="100" height="30" zIndex="93" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput18" top="200" left="560" width="100" height="30" zIndex="94" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput19" top="240" left="560" width="100" height="30" zIndex="95" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput20" top="280" left="560" width="100" height="30" zIndex="96" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput21" top="320" left="560" width="100" height="30" zIndex="97" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput22" top="360" left="560" width="100" height="30" zIndex="98" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput23" top="400" left="560" width="100" height="30" zIndex="99" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput24" top="440" left="560" width="100" height="30" zIndex="100" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput25" top="480" left="560" width="100" height="30" zIndex="101" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput26" top="200" left="680" width="100" height="30" zIndex="102" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput27" top="240" left="680" width="100" height="30" zIndex="103" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput28" top="280" left="680" width="100" height="30" zIndex="104" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput29" top="320" left="680" width="100" height="30" zIndex="105" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput30" top="360" left="680" width="100" height="30" zIndex="106" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput31" top="400" left="680" width="100" height="30" zIndex="107" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput32" top="440" left="680" width="100" height="30" zIndex="108" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput33" top="480" left="680" width="100" height="30" zIndex="109" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput34" top="200" left="800" width="100" height="30" zIndex="110" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput35" top="240" left="800" width="100" height="30" zIndex="111" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput36" top="280" left="800" width="100" height="30" zIndex="112" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput37" top="320" left="800" width="100" height="30" zIndex="113" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput38" top="360" left="800" width="100" height="30" zIndex="114" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput39" top="400" left="800" width="100" height="30" zIndex="115" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput40" top="440" left="800" width="100" height="30" zIndex="116" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput41" top="480" left="800" width="100" height="30" zIndex="117" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput42" top="200" left="920" width="100" height="30" zIndex="118" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput43" top="240" left="920" width="100" height="30" zIndex="119" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput44" top="280" left="920" width="100" height="30" zIndex="120" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput45" top="320" left="920" width="100" height="30" zIndex="121" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput46" top="360" left="920" width="100" height="30" zIndex="122" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput47" top="400" left="920" width="100" height="30" zIndex="123" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput48" top="440" left="920" width="100" height="30" zIndex="124" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput49" top="480" left="920" width="100" height="30" zIndex="125" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput50" top="200" left="1040" width="100" height="30" zIndex="126" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput51" top="240" left="1040" width="100" height="30" zIndex="127" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput52" top="280" left="1040" width="100" height="30" zIndex="128" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput53" top="320" left="1040" width="100" height="30" zIndex="129" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput54" top="360" left="1040" width="100" height="30" zIndex="130" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput55" top="400" left="1040" width="100" height="30" zIndex="131" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput56" top="440" left="1040" width="100" height="30" zIndex="132" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput57" top="480" left="1040" width="100" height="30" zIndex="133" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput58" top="200" left="1160" width="100" height="30" zIndex="134" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput59" top="240" left="1160" width="100" height="30" zIndex="135" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput60" top="280" left="1160" width="100" height="30" zIndex="136" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput61" top="320" left="1160" width="100" height="30" zIndex="137" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput62" top="360" left="1160" width="100" height="30" zIndex="138" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput63" top="400" left="1160" width="100" height="30" zIndex="139" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput64" top="440" left="1160" width="100" height="30" zIndex="140" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput65" top="480" left="1160" width="100" height="30" zIndex="141" />
+    <Widget xsi:type="widgets.brease.PushButton" id="PushButtonUA_Connect" top="200" left="1280" width="220" height="60" zIndex="142" text="UA_Connect" />
+    <Widget xsi:type="widgets.brease.PushButton" id="PushButtonUA_Connect1" top="280" left="1280" width="220" height="60" zIndex="143" text="UA_GetNamespaceIndex" />
+    <Widget xsi:type="widgets.brease.PushButton" id="PushButtonUA_Connect2" top="360" left="1280" width="220" height="60" zIndex="144" text="UA_NodeGetHandleList" />
+    <Widget xsi:type="widgets.brease.PushButton" id="PushButtonUA_Connect3" top="440" left="1280" width="220" height="60" zIndex="145" text="UA_ReadList" />
+    <Widget xsi:type="widgets.brease.PushButton" id="PushButtonUA_Connect4" top="520" left="1280" width="220" height="60" zIndex="146" text="UA_NodeReleaseHandleList" />
+    <Widget xsi:type="widgets.brease.PushButton" id="PushButtonUA_Connect5" top="600" left="1280" width="220" height="60" zIndex="147" text="UA_Disconnect" />
   </Widgets>
 </Content>
