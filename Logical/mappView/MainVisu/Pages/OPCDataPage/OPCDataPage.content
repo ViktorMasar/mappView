@@ -68,11 +68,6 @@
     <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput63" top="400" left="1160" width="100" height="30" zIndex="139" />
     <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput64" top="440" left="1160" width="100" height="30" zIndex="140" />
     <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput65" top="480" left="1160" width="100" height="30" zIndex="141" />
-    <Widget xsi:type="widgets.brease.PushButton" id="PushButtonUA_Connect" top="200" left="1280" width="220" height="60" zIndex="142" text="UA_Connect" />
-    <Widget xsi:type="widgets.brease.PushButton" id="PushButtonUA_Connect1" top="280" left="1280" width="220" height="60" zIndex="143" text="UA_GetNamespaceIndex" />
-    <Widget xsi:type="widgets.brease.PushButton" id="PushButtonUA_Connect2" top="360" left="1280" width="220" height="60" zIndex="144" text="UA_NodeGetHandleList" />
-    <Widget xsi:type="widgets.brease.PushButton" id="PushButtonUA_Connect3" top="440" left="1280" width="220" height="60" zIndex="145" text="UA_ReadList" />
-    <Widget xsi:type="widgets.brease.PushButton" id="PushButtonUA_Connect4" top="520" left="1280" width="220" height="60" zIndex="146" text="UA_NodeReleaseHandleList" />
-    <Widget xsi:type="widgets.brease.PushButton" id="PushButtonUA_Connect5" top="600" left="1280" width="220" height="60" zIndex="147" text="UA_Disconnect" />
+    <Widget xsi:type="widgets.brease.PushButton" id="PushButton1" top="540" left="680" width="220" height="60" zIndex="142" text="Connect" />
   </Widgets>
 </Content>

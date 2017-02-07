@@ -10,5 +10,9 @@
 <Source xsi:type="opcUa" refId="::Communicat:Temperature" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentOPCDataPage" widgetRefId="NumericInput1" attribute="value" />
 </Binding>-->
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ClReadList:btnStart" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentOPCDataPage" widgetRefId="PushButton1" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>

@@ -368,29 +368,29 @@
 <Source xsi:type="opcUa" refId="::ClReadList:readList[7].TJ_iRaport" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentOPCDataPage" widgetRefId="NumericInput58" attribute="value" />
 </Binding>
-<Binding mode="twoWay">
+<!--<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::ClReadList:ExecuteDisconnect_0" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentOPCDataPage" widgetRefId="PushButtonUA_Connect5" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
+</Binding>-->
+<!--<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::ClReadList:ExecuteNodeReleaseHandleList_0" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentOPCDataPage" widgetRefId="PushButtonUA_Connect4" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
+</Binding>-->
+<!--<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::ClReadList:ExecuteReadList_0" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentOPCDataPage" widgetRefId="PushButtonUA_Connect3" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
+</Binding>-->
+<!--<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::ClReadList:ExecuteNodeGetHandleList_0" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentOPCDataPage" widgetRefId="PushButtonUA_Connect2" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
+</Binding>-->
+<!--<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::ClReadList:ExecuteGetnamespaceindex_0" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentOPCDataPage" widgetRefId="PushButtonUA_Connect1" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
+</Binding>-->
+<!--<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::ClReadList:ExecuteConnect_0" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentOPCDataPage" widgetRefId="PushButtonUA_Connect" attribute="value" />
-</Binding>
+</Binding>-->
 </Bindings>
 </BindingsSet>

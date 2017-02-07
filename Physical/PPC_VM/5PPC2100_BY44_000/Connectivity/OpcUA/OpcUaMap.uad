@@ -230,6 +230,7 @@
         </Variable>
       </Task>
       <Task Name="ClReadList">
+        <Variable Name="btnStart" Enable="True" />
         <Variable Name="ExecuteConnect_0" Enable="True" />
         <Variable Name="ExecuteDisconnect_0" Enable="True" />
         <Variable Name="ExecuteGetnamespaceindex_0" Enable="True" />
