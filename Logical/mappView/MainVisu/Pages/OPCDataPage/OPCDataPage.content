@@ -68,6 +68,7 @@
     <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput63" top="400" left="1160" width="100" height="30" zIndex="139" />
     <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput64" top="440" left="1160" width="100" height="30" zIndex="140" />
     <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput65" top="480" left="1160" width="100" height="30" zIndex="141" />
-    <Widget xsi:type="widgets.brease.PushButton" id="PushButton1" top="540" left="680" width="220" height="60" zIndex="142" text="Connect" />
+    <Widget xsi:type="widgets.brease.PushButton" id="PushButton1" top="540" left="560" width="220" height="60" zIndex="142" text="Connect" />
+    <Widget xsi:type="widgets.brease.PushButton" id="PushButton2" top="540" left="820" width="220" height="60" zIndex="143" text="Disconnect" />
   </Widgets>
 </Content>

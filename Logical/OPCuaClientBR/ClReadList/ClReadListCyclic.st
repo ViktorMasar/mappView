@@ -561,7 +561,6 @@ PROGRAM _CYCLIC
 		
 		UA_CONNECT:
 			ExecuteConnect_0						:= TRUE;
-			Connect;
 			IF UA_Connect_0.Done THEN
 				caseClientReadList					:= UA_GET_NAME_SPACE_INDEX;
 				ExecuteConnect_0					:= FALSE;
@@ -569,7 +568,6 @@ PROGRAM _CYCLIC
 		
 		UA_GET_NAME_SPACE_INDEX:
 			ExecuteGetnamespaceindex_0				:= TRUE;
-			GetNameSpaceIndex;
 			IF UA_GetNamespaceIndex_0.Done THEN
 				ExecuteGetnamespaceindex_0			:= FALSE;
 				caseClientReadList					:= UA_NODE_GET_HANDLE_LIST;
@@ -577,7 +575,6 @@ PROGRAM _CYCLIC
 		
 		UA_NODE_GET_HANDLE_LIST:
 			ExecuteNodeGetHandleList_0				:= TRUE;
-			NodeGetHandleList;
 			IF UA_NodeGetHandleList_0.Done THEN
 				ExecuteNodeGetHandleList_0			:= FALSE;
 				caseClientReadList					:= UA_READ_LIST_ON;
@@ -585,7 +582,6 @@ PROGRAM _CYCLIC
 		
 		UA_READ_LIST_ON:
 			ExecuteReadList_0						:= TRUE;
-			ReadList;
 			IF UA_ReadList_0.Done THEN
 				ExecuteReadList_0					:= FALSE;
 				caseClientReadList					:= UA_READ_LIST_OFF;
@@ -593,7 +589,6 @@ PROGRAM _CYCLIC
 		
 		UA_READ_LIST_OFF:
 			ExecuteReadList_0						:= FALSE;
-			ReadList;
 			IF (NOT UA_ReadList_0.Busy) AND (NOT UA_ReadList_0.Done) THEN
 				caseClientReadList					:= UA_READ_LIST_ON;
 				IF btnStop THEN
@@ -605,7 +600,6 @@ PROGRAM _CYCLIC
 		
 		UA_NODE_RELEASE_HANDLE_LIST:
 			ExecuteNodeReleaseHandleList_0			:= TRUE;
-			NodeReleaseList;
 			IF UA_NodeReleaseHandleList_0.Done THEN
 				ExecuteNodeReleaseHandleList_0		:= FALSE;
 				caseClientReadList					:= UA_DISCONNECT;
@@ -628,20 +622,19 @@ PROGRAM _CYCLIC
 			ExecuteNodeReleaseHandleList_0			:= FALSE;
 			ExecuteDisconnect_0						:= FALSE;
 		
-			Connect;
-			GetNameSpaceIndex;
-			NodeGetHandleList;
-			ReadList;
-			NodeReleaseList;
-			Disconnect;
 			IF btnStart THEN
 				ErrorID								:= 0;
 				caseClientReadList					:= WAIT;				
-			END_IF;
-		
-		
-		
+			END_IF;		
 	END_CASE;
+	
+	Connect;
+	GetNameSpaceIndex;
+	NodeGetHandleList;
+	ReadList;
+	NodeReleaseList;
+	Disconnect;
+	
 
 	
 END_PROGRAM
